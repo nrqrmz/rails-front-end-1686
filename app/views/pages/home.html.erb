@@ -1,0 +1,56 @@
+<h1 class="text-rebecca">Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<%= link_to 'click me, I dare you', root_path, class: 'btn btn-danger' %>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-magic" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 bg-rebecca">
+        <h1>Leave a comment</h1>
+        <%= simple_form_for :home do |f| %>
+          <div class="row">
+            <div class="col-6">
+              <%= f.input :first_name %>
+            </div>
+            <div class="col-6">
+              <%= f.input :last_name %>
+            </div>
+          </div>
+          <%= f.input :comment %>
+          <%= f.submit value: 'Submit', class: 'btn btn-info' %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-magic">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to '', class: 'btn btn-rebecca' do %>
+  <i class="fa-solid fa-house"></i>
+<% end %>
+
+<div class="row justify-content-center">
+  <div class="col-3">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      Breakfast
+    </div>
+
+  </div>
+</div>
+
+<%= image_tag "logo.png", alt: "Le Wagon", width: 200 %>
+<div class="logo"></div>
